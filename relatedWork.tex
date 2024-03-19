@@ -1,0 +1,57 @@
+% !TeX root = main.tex
+\section{THEORETICAL FRAMEWORK} \label{sec:frameworks}
+This work adopts theoretical framings from personality psychology, criminology, and education. This section briefly explains the concepts from these theoretical frameworks for the readers' benefit (In the next section, we explain how they relate to computing education and this work in particular). 
+
+\subsection{Personality Psychology}
+The Big Five personality traits, the Five Factor Model (FFM), represent a widely accepted framework for understanding and categorizing human personality. This model emerged due to extensive psychological research to identify the fundamental dimensions underlying individual personality differences. The development of the Big Five model began in the late 20th century, with early research conducted by psychologists such as Tupes and Christal in the 1960s \cite{tupesRECURRENTPERSONALITYFACTORS}, followed by the work of Goldberg in the 1980s and 1990s \cite{Goldberg1990, Goldberg}, which laid the groundwork for the modern understanding of these traits.
+
+The Big Five traits encompass five broad dimensions, each representing a distinct aspect of personality:
+
+\begin{enumerate}
+    \item \textbf{Openness to Experience (O):} This trait reflects one's inclination towards intellectual curiosity, creativity, and openness to new ideas, experiences, and perspectives. Individuals high in openness tend to be imaginative, curious, and open-minded, while those low in openness may be more conventional, cautious, and resistant to change.
+    \item \textbf{Conscientiousness (C):} Conscientiousness pertains to the degree of organization, responsibility, diligence, and self-discipline an individual exhibits. High conscientiousness is associated with reliability, thoroughness, and goal-directed behavior, whereas low conscientiousness may manifest as impulsivity, disorganization, and a lack of follow-through.
+    \item \textbf{Extraversion (E):} Extraversion refers to the extent to which an individual is outgoing, sociable, assertive, and energetic in social interactions. High extraversion is characterized by traits such as sociability, talkativeness, and enthusiasm, while introversion is marked by a preference for solitude, introspection, and quieter activities.
+    \item \textbf{Agreeableness (A):} Agreeableness encompasses kindness, empathy, cooperativeness, and compassion towards others. Individuals high in agreeableness tend to be altruistic, trusting, and accommodating, whereas those low in agreeableness may exhibit more competitive, skeptical, or antagonistic tendencies.
+    \item \textbf{Neuroticism (N):} Neuroticism reflects the tendency to experience negative emotions such as anxiety, depression, irritability, and vulnerability to stress. High neuroticism is associated with traits such as emotional volatility, insecurity, and sensitivity to perceived threats, while low neuroticism is characterized by emotional resilience, calmness, and emotional stability.
+\end{enumerate}
+
+\subsection{Criminology}
+The fraud triangle, a seminal concept in criminology, was introduced by sociologist and criminologist Donald R. Cressey in 1953 \cite{Cressey}. This framework suggests that three key factors - \textit{opportunity, motivation (or pressure), and rationalization} are typically present in occupational fraud or embezzlement. According to Cressey, individuals are more likely to engage in fraudulent behavior when they perceive an opportunity to commit the act, experience pressure or motivation to do so (often due to financial difficulties or other personal stressors), and can justify or rationalize their actions. 
+
+\subsection{Academic Integrity}
+Academic integrity, which entails adhering to ethical principles in academic pursuits, is commonly understood by its negation behaviors that involve obtaining and utilizing unauthorized assistance in assignments and exams. Among these, plagiarism, defined as using others' work without proper acknowledgment, has received extensive scholarly attention. While much of the existing research on academic integrity focuses on textual plagiarism, there is growing recognition that plagiarism can occur across various non-text mediums such as source code and multimedia \cite{Marcin2016,10.1145/2526968.2526971}. Additionally, collaboration on assignments violating individual work requirements, termed \textit{collusion} \cite{JonesJuliet}, has emerged as a source of ambiguity concerning the distinction between acceptable conduct and academic impropriety.
+
+
+\section{Related Work} \label{sec:relatedwork}
+
+\subsection{The Big Five Personality Traits in Academic Plagiarism}
+
+Interest in the influence of the big five personality traits on academic plagiarism has grown in recent years. However, research in this area remains limited within computing education. Contradictory findings exist in the literature; for example, Bhutto et al. \cite{Bhutto2019ACS} explored the correlation between personality traits and plagiarism among 231 students from social science departments, revealing \textit{positive} associations with agreeableness, conscientiousness, extraversion, and openness to experience, while no significant relationship was found with neuroticism. Conversely, Correa \cite{ChileanUniver} investigated cyber plagiarism among 106 Chilean undergraduate students, finding a significant \textit{negative} correlation with conscientiousness, extraversion, and openness to experience and a positive correlation with neuroticism. Both of their works use a questionnaire measuring personality traits and self-reported plagiarism behavior.
+
+Giluk et al.\cite{Giluk2015BigFP} performed a meta-analysis to estimate the relationship between each of the Big Five personality factors and academic dishonesty. Their findings indicate that conscientiousness and agreeableness are the strongest Big Five predictors, with both factors negatively related to academic dishonesty.
+
+Wilks et al. \cite{Wilks2016-WILPTA-3} conducted the same study in the Portuguese context with undergraduate students from Law and Criminology departments and found that Conscientiousness and Agreeableness traits are negatively correlated with the inclination to plagiarize, while no significant association was found with Neuroticism. 
+
+\begin{table}[h]
+  \centering
+  \caption{Summary of Big Five traits and Plagiarism \\\label{tab:litSUmmary}}
+    \vspace{-12pt}
+  \begin{tabular}{p{2cm}rrrrrr}
+    \toprule
+    Study & Participants & A & O & N & E & C \\\midrule
+    Bhutto et al.\cite{Bhutto2019ACS} & 231 & +ve & +ve & - & +ve & +ve \\
+    Correa\cite{ChileanUniver} & 106 & - & -ve & +ve & -ve & -ve \\
+    Wilks et al.\cite{Wilks2016-WILPTA-3} & 373 & -ve & - & - & - & -ve \\
+    Giluk et al.\cite{Giluk2015BigFP} & NA & -ve & - & - & - & -ve \\ \bottomrule
+  \end{tabular}
+  \vspace{-4pt}
+\end{table}
+
+Table \ref{tab:litSUmmary} provides an overview of the literature regarding the impact of each of the big five traits on academic plagiarism. A positive (+ve) or negative (-ve) sign denotes the direction of influence, while "-" indicates no significant effect. The findings suggest inconclusiveness, necessitating further replication and substantiation through additional evidence. Notably, there is a substantial gap in conducting such research within computing education. Our study addresses this gap through the exploration outlined in research question RQ\ref{RQ1}.
+
+\subsection{Plagiarism in Programming Assignments}
+Plagiarism in computing education has been researched heavily in the past two decades. Albluwi \cite{10.1145/3371156} conducted a comprehensive systematic review of plagiarism in programming assignments in 2019 with 87 published papers from the lens of the fraud triangle. The review revealed that a majority (68\%) of the examined papers focused on methods to reduce \textit{opportunities} for plagiarism and tools for detecting it. However, there is a notable absence of empirical research assessing the effectiveness of these strategies and tools as deterrents. Additionally, the papers (33\%) discussed various \textit{rationalizations} employed by computing students to justify plagiarism, with genuine confusion about plagiarism definitions being a prominent factor. Additionally, research on the correlation between academic \textit{pressure} in computing courses and plagiarism was found to be limited.
+
+Research studies have consistently highlighted significant confusion among students regarding the distinction between acceptable collaboration and unacceptable collusion \cite{10.1145/2591708.2591755, 10.1145/2632320.2632342, Joy2011SourceCP}. While researchers have underscored the importance of clearly communicating what constitutes plagiarism to students \cite{10.1145/1595496.1562900, 10.1145/3160489.3160502, 10.1145/1734263.1734365, 10.1145/3024906.3024910}, there remains a lack of research examining the effectiveness of such efforts. This study addresses this gap through research question RQ2.
+
+
