@@ -4,7 +4,7 @@
 In this section, we provide a detailed overview of the context in which our study was conducted, including the setting, participant details, measurement tools employed, and the research methodology adopted.
 
 \subsection{Setting and Participants}
-The research was conducted within an Artificial Intelligence (AI) elective course, consisting of three credits, during the Fall semester of 2023 at a large private university in India. The study involved 105 junior and senior undergraduate students pursuing computer science and information systems degrees. Among the participants, 98 were male, and 7 were female, all within the age range of 18 to 21 and hailing from India. The course employed a continuous evaluation method, with 30\% allocated to two programming assignments, 30\% to a mid-term closed-book examination, and 40\% to a comprehensive closed-book final examination at the end of the term.
+The research was conducted within an Artificial Intelligence (AI) elective course, consisting of three credits. In our institute, three credits correspond to a total of nine hours of work during a week, including three 1 hour lectures. This occurred during the Fall semester of 2023 at a large private university in India. The study involved 105 junior and senior undergraduate students pursuing computer science and information systems degrees. Among the participants, 98 were male, and 7 were female, all within the age range of 18 to 21 and hailing from India. The course employed a continuous evaluation method, with 30\% allocated to two programming assignments, 30\% to a mid-term closed-book examination, and 40\% to a comprehensive closed-book final examination at the end of the term.
 
 \subsection{Measures}
 The following measures were used in the study:
@@ -15,11 +15,17 @@ The 120-item version of the IPIP scale comprises 24 items for each subscale, tot
 
 \subsubsection{Plagiarism Detection}
 
-The Measure of Software Similarity (MOSS) tool \cite{MOSS} was used to detect plagiarism in the programming assignments through collusion among students. MOSS provided a percentage-based measure of similarity between code submissions, allowing for the quantification of plagiarism in each of the two programming assignments.
+The Measure of Software Similarity (MOSS) tool \cite{MOSS} was used to detect plagiarism in the programming assignments through collusion among students. MOSS provided a percentage-based measure of similarity between code submissions, allowing for the quantification of plagiarism in each of the two programming assignments. The following command was used to get the count of similar lines: 
+\begin{verbatim}
+./moss.pl -l python -b ProgramBaseFile/Base_program.py \
+Programs/*.py
+\end{verbatim}
+
+MOSS usually reports all code matches in pairs of program files. However, when a `base file' is provided using the \textbf{-b} option, the lines of code present in the base file are not counted in the matches reported by MOSS. This ensures that any matching code between two students is not due to the base program provided by the instructor for the programming assignment. The preference for the MOSS tool over JPlag or other source code plagiarism detection tools stemmed from the authors' familiarity with MOSS. In future studies, we intend to incorporate multiple tools to ensure comprehensive plagiarism detection, acknowledging the limitations of relying solely on one tool.
 
 \subsection{Research Design}
 
-As depicted in Figure \ref{fig:activityTimeline}, the first programming assignment was given two weeks from the start of the semester. The second programming assignment was given ten weeks from the start of the semester. Owing to the significant usage of honor pledges to educate students on academic integrity expectations in literature (as discussed in Sec \ref{sec:relatedwork}), we asked students to take an honor pledge during the ninth week.
+As depicted in Figure \ref{fig:activityTimeline}, the first programming assignment was given two weeks from the start of the semester. The second programming assignment was given ten weeks from the start of the semester. Owing to the significant usage of honor pledges to educate students on academic integrity expectations in literature (as discussed in Sec \ref{sec:relatedwork}), we asked students to take an honor pledge during the ninth week. The honour pledge was a pre-requisite for the second programming assignment, all the students 105 students participated in the pledge. 
 
 The Big Five personality trait assessment test was done after the students submitted the second programming assignment during the twelfth week. This sequencing was deliberate to prevent students from discerning our interest in studying their behavior during the programming assignment. The first programming assignment was rolled out without explicit guidance or instructions regarding plagiarism. (However, it was mentioned in the course handout that plagiarism in programming assignments will be strictly dealt with as per the institute policy.)
 
