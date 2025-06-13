@@ -58,7 +58,7 @@
 
 %%%% Generic manuscript mode, required for submission
 %%%% and peer review
-\documentclass[manuscript, review,screen,sigconf]{acmart}
+\documentclass[manuscript,screen,sigconf]{acmart}
 %% Fonts used in the template cannot be substituted; margin 
 %% adjustments are not allowed.
 %%
@@ -72,19 +72,19 @@
 %% values in them; it is your responsibility as an author to replace
 %% the commands and values with those provided to you when you
 %% complete the rights form.
-\setcopyright{acmcopyright}
-\copyrightyear{2024}
-\acmYear{2024}
-\acmDOI{XXXXXXX.XXXXXXX}
+
 
 \acmConference[ICER 2024]{}{August 13--15, 2024}{ Melbourne, Victoria, Australia}
 %
 %  Uncomment \acmBooktitle if th title of the proceedings is different
 %  from ``Proceedings of ...''!
 %
-\acmBooktitle{} 
-\acmPrice{}
-\acmISBN{}
+\copyrightyear{2024}
+\acmYear{2024}
+\setcopyright{acmlicensed}\acmConference[ICER '24 Vol. 1]{ACM Conference on International Computing Education Research V.1}{August 13--15, 2024}{Melbourne, VIC, Australia}
+\acmBooktitle{ACM Conference on International Computing Education Research V.1 (ICER '24 Vol. 1), August 13--15, 2024, Melbourne, VIC, Australia}
+\acmDOI{10.1145/3632620.3671121}
+\acmISBN{979-8-4007-0475-8/24/08}
 
 %%
 %% Submission ID.
@@ -108,13 +108,12 @@
 %%
 %% end of the preamble, start of the body of the document source.
 \usepackage{enumitem}
+\usepackage{fancybox}
 \usepackage{hyperref}
-\usepackage{comment}
-\usepackage{mdframed}
-
-\usepackage{graphicx}
-\usepackage{caption}
-\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{pifont}%
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
 
 \begin{document}
 
@@ -130,47 +129,36 @@
 %% "authornote" and "authornotemark" commands
 %% used to denote shared contribution to the research.
  
-%%\author{P D Parthasarathy}\email{p20210042@goa.bits-pilani.ac.in}\orcid{0000-0002-8723-2407}
-%%\affiliation{%
-%%\institution{BITS Pilani, KK Birla Goa Campus}
-%%\city{}\state{Goa}
-%%\country{India}
-%%\postcode{403726}
-%%}
-%%\author{Swaroop Joshi}\email{swaroopj@goa.bits-pilani.ac.in}\orcid{0000-0003-4536-2446}
-%%\affiliation{%
-%%  \institution{BITS Pilani, KK Birla Goa Campus}
-%%  \city{}\state{Goa}
-%%  \country{India}
-%%  \postcode{403726}
-%%}
-%%\author{Dev Goel}\email{f20190236@goa.bits-pilani.ac.in}\orcid{0009-0006-4775-4776}
-%%\affiliation{%
-%%  \institution{BITS Pilani, KK Birla Goa Campus}
-%%  \city{}\state{Goa}
-%%  \country{India}
-%%  \postcode{403726}
+\author{P D Parthasarathy}\email{p20210042@goa.bits-pilani.ac.in}\orcid{0000-0002-8723-2407}
+\affiliation{%
+\institution{Department of Computer Science and Information Systems \\ BITS Pilani, KK Birla Goa Campus, Goa, India}
+\city{}\state{}
+\country{}
+\postcode{}
+}
 
-\author{First author}\email{email@email}\orcid{0000-0000-0000-0000}
+\author{Ishaan Kapoor}\email{f20212091@goa.bits-pilani.ac.in}\orcid{0009-0002-4221-638X}
 \affiliation{%
-  \institution{Univerisity Name}
-  \city{}\state{State}
-  \country{Country}
-  \postcode{Code}
+\institution{Department of Computer Science and Information Systems \\ BITS Pilani, KK Birla Goa Campus, Goa, India}
+\city{}\state{}
+\country{}
+\postcode{}
 }
-\author{Second author}\email{email@email}\orcid{0000-0000-0000-0000}
+
+\author{Swaroop Joshi}\email{swaroopj@goa.bits-pilani.ac.in}\orcid{0000-0003-4536-2446}
 \affiliation{%
-  \institution{Univerisity Name}
-  \city{}\state{State}
-  \country{Country}
-  \postcode{Code}
+\institution{Department of Computer Science and Information Systems \\ BITS Pilani, KK Birla Goa Campus, Goa, India}
+\city{}\state{}
+\country{}
+\postcode{403726}
 }
-\author{Third author}\email{email@email}\orcid{0000-0000-0000-0000}
+
+\author{Sujith Thomas}\email{sujitht@goa.bits-pilani.ac.in}\orcid{0000-0001-6955-3664}
 \affiliation{%
-  \institution{Univerisity Name}
-  \city{}\state{State}
-  \country{Country}
-  \postcode{Code}
+\institution{Department of Computer Science and Information Systems, APPCAIR, BITS Pilani, KK Birla Goa Campus, Goa, India}
+\city{}\state{}
+\country{}
+\postcode{403726}
 }
 
 %% By default, the full list of authors will be used in the page
